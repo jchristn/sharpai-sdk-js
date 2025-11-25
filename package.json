@@ -67,12 +67,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharpai/sdk-js.git"
+    "url": "git+https://github.com/jchristn/sharpai-sdk-js.git"
   },
   "bugs": {
-    "url": "https://github.com/sharpai/sdk-js/issues"
+    "url": "https://github.com/jchristn/sharpai-sdk-js/issues"
   },
-  "homepage": "https://github.com/sharpai/sdk-js",
+  "homepage": "https://github.com/jchristn/sharpai-sdk-js",
   "engines": {
     "node": ">=8.9.0"
   }
