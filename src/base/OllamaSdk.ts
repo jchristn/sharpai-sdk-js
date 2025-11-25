@@ -75,20 +75,7 @@ export default class OllamaSdk extends SdkBase {
     const url = `${this.config.endpoint}api/pull`;
     return this.post(url, request, cancellationToken, onToken);
   }
-  // /**
-  //  * Retrieve model information using the Ollama /api/show endpoint.
-  //  * @param {{name:string}} request - The parameters for model information. Should match Ollama /api/show payload.
-  //  * @param {AbortController} [cancellationToken] - Optional cancellation token for cancelling the request.
-  //  * @return {Promise<object>} Resolves with the model information response.
-  //  * @throws {Error} Rejects with the error in case of failure.
-  //  */
-  // async modelInformation(request: { name: string }, cancellationToken?: AbortController | undefined): Promise<any> {
-  //   if (!request) {
-  //     GenericExceptionHandlers.ArgumentNullException('request');
-  //   }
-  //   const url = `${this.config.endpoint}api/show`;
-  //   return this.post(url, request, cancellationToken);
-  // }
+
   /**
    * Delete a model using the Ollama /api/delete endpoint.
    * @param {{name:string}} request - The parameters for deleting the model. Should match Ollama /api/delete payload.
@@ -113,17 +100,6 @@ export default class OllamaSdk extends SdkBase {
     const url = `${this.config.endpoint}api/tags`;
     return this.get<ModelListResponse>(url, cancellationToken);
   }
-
-  // /**
-  //  * List running models using the Ollama /api/ps endpoint.
-  //  * @param {AbortController} [cancellationToken] - Optional cancellation token for cancelling the request.
-  //  * @return {Promise<ModelListResponse>} Resolves with the response containing the list of running models.
-  //  * @throws {Error} Rejects with the error in case of failure.
-  //  */
-  // async listRunningModel(cancellationToken?: AbortController | undefined): Promise<ModelListResponse> {
-  //   const url = `${this.config.endpoint}api/ps`;
-  //   return this.get<ModelListResponse>(url, cancellationToken);
-  // }
 
   /**
    * Generate embeddings using the Ollama /api/embed endpoint.
